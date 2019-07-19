@@ -14,7 +14,7 @@ func SetupRouter() *gin.Engine {
 
 	mc := controllers.MainController{}
 
-	r.GET("/", mc.Hello)
-
+	r.GET("/get", mc.Get)
+	r.POST("/post", mc.Post)
 	return r
 }
