@@ -4,7 +4,7 @@ import (
 	"log"
 
 	"github.com/gin-gonic/gin"
-	"github.com/liontail/go-api-template/models"
+	"github.com/liontail/gin-api-template/models"
 )
 
 type MainController struct {

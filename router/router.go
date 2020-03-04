@@ -2,7 +2,7 @@ package router
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/liontail/go-api-template/controllers"
+	"github.com/liontail/gin-api-template/controllers"
 )
 
 func SetupRouter() *gin.Engine {
@@ -16,5 +16,6 @@ func SetupRouter() *gin.Engine {
 
 	r.GET("/get", mc.Get)
 	r.POST("/post", mc.Post)
+
 	return r
 }

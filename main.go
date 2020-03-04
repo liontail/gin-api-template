@@ -9,21 +9,23 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/liontail/go-api-template/router"
+	"github.com/liontail/gin-api-template/router"
 )
 
 func main() {
 	r := router.SetupRouter()
 
 	srv := &http.Server{
-		Addr:    ":8080",
+		Addr:    ":3000",
 		Handler: r,
 	}
 
 	go func() {
 		// service connections
+		fmt.Println("listen and serve:", srv.Addr)
 		if err := srv.ListenAndServe(); err != nil && err != http.ErrServerClosed {
 			fmt.Println("listen:", err)
+			return
 		}
 	}()
 
